@@ -18,7 +18,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/signup' do
-
     if params[:username].empty?
       redirect '/signup'
     elsif params[:email].empty?
@@ -30,6 +29,9 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  get 'login' do
+    erb :login
+  end
   get '/tweets' do
 
   end
